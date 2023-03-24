@@ -20,6 +20,7 @@ def jonswap(Hs, Tp, df, fcutoff_high):
 #         Swjs: JONSWAP spectrum as a function of angular frequency
 #         f: frequency
 #         omega: angular frequency
+
     gamma = 3.3
     inv2pi = 0.15915494
     omega = np.arange(df/inv2pi, fcutoff_high/inv2pi + df, df/inv2pi)
