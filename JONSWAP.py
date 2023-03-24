@@ -16,7 +16,7 @@ def jonswap(Hs, Tp, df, fcutoff_high):
 #         fcutoff_high: high cutoff frequency
 
 #     Outputs:
-#         Sfjs: JONSWA spectrum as a function of frequency
+#         Sfjs: JONSWAP spectrum as a function of frequency
 #         Swjs: JONSWAP spectrum as a function of angular frequency
 #         f: frequency
 #         omega: angular frequency
