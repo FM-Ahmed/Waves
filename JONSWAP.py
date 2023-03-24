@@ -20,9 +20,9 @@ def jonswap(Hs, Tp, df, fcutoff_high):
     alphalist = []
     for i in range(len(f)):
         if f[i] <= fp:
-            sigma = 0.07 #this used to be 0.7, now it is corrected to 0.07 (same as OpenFAST)
+            sigma = 0.07
         if f[i] > fp:
-            sigma = 0.09  #this used to be 0.9, now it is corrected to 0.09 (same as OpenFAST) 
+            sigma = 0.09
         al = np.exp((-0.5*(((f[i]*Tp)-1.0)/sigma)**2))
         alphalist.append(al)
     
@@ -30,4 +30,3 @@ def jonswap(Hs, Tp, df, fcutoff_high):
     Swjs = inv2pi*C*(0.3125*Hs*Hs*fpOvrf4/f)*np.exp((-1.25*fpOvrf4))*(gamma**alpha)
     Sfjs = 2*np.pi*Swjs
     return Sfjs, Swjs, f, omega
-
